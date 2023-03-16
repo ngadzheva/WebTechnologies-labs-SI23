@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>Forms Demo</title>
+    </head>
+
+    <body>
+        <form method="post">
+            <fieldset>
+                <legend>Данни за потребителя</legend>
+                <label>
+                    Потребителско име
+                    <input type="text" name="username" required />
+                </label>
+    
+                <label for="password">Парола</label>
+                <input id="password" type="password" name="password" pattern="[a-zA-Z0-9]{6}" required />
+    
+                <label for="confirm-password">Потвърждаване на парола</label>
+                <input id="confirm-password" type="password" name="confirm-password" pattern="[a-zA-Z0-9]{6}" required />
+    
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Лични данни</legend>
+
+                <label for="name">Три имена</label>
+                <input id="name" type="text" name="name" />
+
+                <label for="age">Години</label>
+                <input id="age" type="number" name="age" />
+
+                <label>Пол</label>
+                <label for="male">Мъж</label>
+                <input id="male" type="radio" name="M" />
+                <label for="female">Жена</label>
+                <input id="female" type="radio" name="F" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Адрес</legend>
+
+                <label>Държава</label>
+                <select name="country">
+                    <option value="BG">България</option>
+                    <option value="UK">Великобритания</option>
+                    <option value="USA">САЩ</option>
+                    <option value="CAN">Канада</option>
+                </select>
+
+                <label>Град</label>
+                <select name="city">
+                    <optgroup label="България">
+                        <option value="Sofia">София</option>
+                        <option value="Plovdiv" selected>Пловдив</option>
+                        <option value="Varna">Варна</option>
+                        <option value="Burgas">Бургас</option>
+                    </optgroup>
+                    <optgroup label="Великобритания">
+                        <option value="London">Лондон</option>
+                    </optgroup>
+                    <optgroup label="САЩ">
+                        <option value="New York">Ню Йорк</option>
+                    </optgroup>
+                    <optgroup label="Канада">
+                        <option value="Ontario">Онтарио</option>
+                    </optgroup>
+                </select>
+
+                <label for="postal-code">Пощенски код</label>
+                <input id="postal-code" type="text" name="postal-code" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Образование</legend>
+
+                <label>Основно</label>
+                <input type="checkbox" value="high-school" name="education" />
+                <label>Бакалавър</label>
+                <input type="checkbox" value="bachelor" name="education" />
+                <label>Магистър</label>
+                <input type="checkbox" value="master" name="education" />
+            </fieldset>
+
+            <textarea>Текстово поле</textarea>
+
+            <input type="submit" value="Регистрирай" />
+        </form>
+    </body>
+</html>
